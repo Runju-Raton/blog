@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
+       $faker = Factory::create();
        foreach(range(0,14) as $index){
         Category::create([
             'name'  => $name=$faker->name,

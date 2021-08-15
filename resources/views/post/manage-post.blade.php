@@ -20,7 +20,7 @@
         <tbody>
             @foreach ($posts as $post)
             <tr>
-                <td>{{ $loop->index }}</td>
+                <td>{{ $loop->index + 1}}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->slug }}</td>
                 <td> <img width="30px" height="30px" src="{{ $post->image }}" alt=""></td>

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Post;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
@@ -21,7 +22,8 @@ class PostSeeder extends Seeder
              'title'       => $slug=$faker->sentence,
              'slug'        => Str::slug($slug),
              'description' =>$faker->sentence,
-             'image'       => 'https://source.unsplash.com/random'
+             'image'       => 'https://source.unsplash.com/random',
+             'category_id' => Category::inRandomOrder()->first()->id,
          ]);
          }
     }
